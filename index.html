@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consultora Power</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <div id="main-content">
+    <header>
+      <img src="media/Logotipo.png" alt="Logo Consultora Power" class="logo" />
+      <h1>Consultora Power</h1>
+    </header>
+
+    <main class="hero">
+      <div class="hero-text">
+        <h2>Soluciones Eficientes con Power Platform</h2>
+        <p>
+          Somos una consultora especializada en soluciones empresariales utilizando la Power Platform. Automatizamos procesos, creamos aplicaciones de negocio y ayudamos a las empresas a alcanzar la excelencia operativa con herramientas modernas y eficientes.
+        </p>
+        <div class="cta">
+          <button onclick="mostrarFormulario()">Trabaja con nosotros</button>
+        </div>
+      </div>
+      <img src="media/Foto_Inicio.jpg" alt="Equipo trabajando" />
+    </main>
+  </div>
+
+
+
+
+
+
+  <!--<div id="fondo" class="fondo">
+    <header class="logo-container">
+      <img src="media/Logotipo_consultoraPower 1 (1).png" alt="Logo de la empresa">
+      <h1>Consultora Power</h1>
+    </header>
+    <main>
+      <h2>Soluciones Eficientes con Power Platform</h2>
+      <p>Somos una consultora especializada en soluciones empresariales utilizando la Power Platform. Automatizamos procesos, creamos aplicaciones de negocio y ayudamos a las empresas a alcanzar la excelencia operativa con herramientas modernas y eficientes.</p>
+      <button onclick="mostrarFormulario()">Trabaja con nosotros</button>
+      <img src="media/Foto_Inicio.jpg" alt="Foto de inicio" class="foto-inicio">
+    </main>
+  </div>-->
+
+  <div id="modal-overlay" class="modal-overlay" style="display:none;">
+    <div class="modal" id="modal">
+      <button class="cerrar-modal" onclick="cerrarFormulario()">×</button>
+      <div class="logo-container">
+        <img src="media/Logotipo.png" alt="Logo">
+        <h2>Formulario Recursos Humanos</h2>
+      </div>
+      <form>
+        <label>Nombre</label>
+        <input type="text" placeholder="Escriba aquí su nombre">
+
+        <label>Apellido</label>
+        <input type="text" placeholder="Escriba aquí su apellido">
+
+        <label>Email</label>
+        <input type="email" placeholder="Escriba aquí su correo electrónico">
+
+        <label>Teléfono</label>
+        <div class="telefono-grupo">
+          <span class="prefijo">+34</span>
+          <input type="tel" placeholder="Número de teléfono">
+        </div>
+
+        <fieldset>
+          <legend>Departamento</legend>
+          <label><input type="radio" name="departamento">Ventas y comercial</label>
+          <label><input type="radio" name="departamento">Atención al cliente y soporte</label>
+          <label><input type="radio" name="departamento">Operaciones y administración interna</label>
+          <label><input type="radio" name="departamento">Gestión de proyectos</label>
+          <label><input type="radio" name="departamento">Recursos Humanos</label>
+        </fieldset>
+
+        <label>Adjunta aquí tu C.V. (PDF)</label>
+        <input type="file" accept=".pdf">
+
+        <label>Sube tu video de presentación (MP4, máx. 100 MB)</label>
+        <input type="file" accept="video/mp4">
+
+        <button type="submit">Enviar</button>
+      </form>
+    </div>
+  </div>
+  <footer class="footer">
+  <div class="footer-contenido">
+    <p>© 2025 Consultora Power. Todos los derechos reservados.</p>
+    <p>
+      <a href="#">Aviso legal</a> | 
+      <a href="#">Política de privacidad</a> | 
+      <a href="#">Cookies</a>
+    </p>
+  </div>
+  </footer>
+  <script src="javascript.js"></script>
+</body>
+</html>
