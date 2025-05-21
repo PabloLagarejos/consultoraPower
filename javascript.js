@@ -26,7 +26,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
   const nombre = document.querySelector('input[name="nombre"]').value;
-  const apellidos = document.querySelector('input[name="apellido"]').value.value;
+  const apellidos = document.querySelector('input[name="apellido"]').value;
   const email = document.querySelector('input[name="email"]').value;
   const telefono = document.querySelector('input[name="telefono"]').value;
   const departamento = document.querySelector('input[name="departamento"]:checked')?.nextSibling.textContent.trim();
