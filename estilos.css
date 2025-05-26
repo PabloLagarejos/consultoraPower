@@ -60,12 +60,20 @@ header {
 .cta button {
   background-color: #e77009;
   color: white;
+  margin-top: 1rem;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
+  
+}
+.cta button:hover{
+   
+  background-color: white;
+  color: #e77009; 
+  
 }
 .logo {
   height: 50px;
