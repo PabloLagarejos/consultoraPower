@@ -39,7 +39,8 @@ header {
 
 .hero-text h2 {
   font-size: 2.2rem;
-  color: #0078d4;
+  color: #e77009;
+  text-shadow: #333;
 }
 
 .hero-text p {
@@ -57,17 +58,20 @@ header {
   filter: blur(6px);
 }
 .cta button {
-  background-color: #0078d4;
+  background-color: #e77009;
   color: white;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);  
 }
 .logo {
   height: 50px;
   margin-right: 1rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+  
 }
 .logo-container {
   display: flex;
@@ -80,7 +84,7 @@ header {
   height: 40px;
 }
 
-.foto-inicio {
+.Foto_Inicio {
   margin-top: 30px;
   width: 400px;
 }
@@ -109,7 +113,11 @@ header {
   overflow-y: auto;
   max-height: 90vh;
 }
-
+main img{
+  margin-top: 30px;
+  width: 400px;
+   
+}
 .cerrar-modal {
   position: absolute;
   top: 15px;
@@ -132,14 +140,19 @@ header {
   margin-bottom: 30px;
   font-size: 2em;
 }
-
+ 
 form label {
   font-weight: bold;
   margin-top: 15px;
   display: block;
   color: #555;
 }
-
+.foto-sombra{
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 8px; /* opcional, por estética */
+  max-width: 100%;    /* asegura que no se desborde */
+  height: auto;
+}
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -176,6 +189,7 @@ input[type="radio"] {
 
 button[type="submit"] {
   background-color: #ffa600;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2); /* 💡 Aquí está la sombra */
   color: white;
   border: none;
   padding: 12px 20px;
@@ -185,10 +199,12 @@ button[type="submit"] {
   margin-top: 20px;
   width: 100%;
   transition: background-color 0.3s;
+  
 }
 
 button[type="submit"]:hover {
   background-color: #e69500;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* sombra más intensa al pasar el ratón */
 }
 
 .telefono-grupo {

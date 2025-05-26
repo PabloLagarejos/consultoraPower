@@ -72,11 +72,14 @@ document.querySelector("form").addEventListener("submit", async function (e) {
 
     if (response.ok) {
       alert("¡Formulario enviado correctamente!");
+      document.querySelector("form").reset();
+      cerrarFormulario();
     } else {
       alert("Error al enviar el formulario.");
     }
   } catch (err) {
     console.error(err);
     alert("Ocurrió un error al enviar los datos.");
+    cerrarFormulario();
   }
 });
