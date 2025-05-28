@@ -71,15 +71,22 @@ document.querySelector("form").addEventListener("submit", async function (e) {
     });
 
     if (response.ok) {
-      alert("¡Formulario enviado correctamente!");
-      document.querySelector("form").reset();
-      cerrarFormulario();
-    } else {
+      try {
+        alert("¡Formulario enviado correctamente!");
+        document.querySelector("form").reset();
+        cerrarFormulario();
+      } 
+      catch (uiError) {
+        console.error("Error al actualizar la interfaz:", uiError);
+      }
+    } 
+    else {
       alert("Error al enviar el formulario.");
     }
-  } catch (err) {
-    console.error(err);
-    alert("Ocurrió un error al enviar los datos.");
-    cerrarFormulario();
-  }
+} 
+catch (err) {
+  console.error(err);
+  alert("Ocurrió un error al enviar los datos.");
+  cerrarFormulario();
+}
 });
