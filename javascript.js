@@ -1,27 +1,3 @@
-
-function mostrarFormulario() {
-  document.getElementById('modal-overlay').style.display = 'flex';
-  document.getElementById('fondo').classList.add('blurred');
-}
-
-function cerrarFormulario() {
-  document.getElementById('modal-overlay').style.display = 'none';
-  document.getElementById('fondo').classList.remove('blurred');
-}
-
-window.addEventListener('click', function (e) {
-  const modal = document.getElementById('modal');
-  const overlay = document.getElementById('modal-overlay');
-  if (e.target === overlay) {
-    cerrarFormulario();
-  }
-});
-
-window.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
-    cerrarFormulario();
-  }
-});
 document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -39,7 +15,10 @@ document.querySelector("form").addEventListener("submit", async function (e) {
 
   const toBase64 = file => new Promise((resolve, reject) => {
     const reader = new FileReader();
-    reader.onload = () => resolve(reader.result.split(',')[1]);
+    reader.onload = () => {
+      const base64Data = reader.result.split(',')[1];
+      resolve(base64Data);
+    };
     reader.onerror = error => reject(error);
     reader.readAsDataURL(file);
   });
@@ -48,18 +27,18 @@ document.querySelector("form").addEventListener("submit", async function (e) {
   const videoBase64 = videoFile ? await toBase64(videoFile) : "";
 
   const datos = {
-    nombre,
-    apellidos,
-    email,
-    telefono,
-    departamento,
+    nombre: nombre,
+    apellidos: apellidos,
+    email: email,
+    telefono: telefono,
+    departamento: departamento,
     cv: cvBase64,
     video: videoBase64,
     cvNombre: cvFile?.name || "sin_nombre.pdf",
     videoNombre: videoFile?.name || "sin_video.mp4"
   };
 
-  const url = "https://prod-57.northeurope.logic.azure.com:443/workflows/6eaf2628f8e943f2a5e878162f9901b5/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=-TVjO-S1ZZ4ye9GshWgtRp0GpnqGS7KOdCKgbOaYQUg";
+  const url = "https://prod-46.northeurope.logic.azure.com:443/workflows/50e2b23e7d1844ce8ed67452de6be5de/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=QS-d8sEOAVnkhDO6tGjGPh0IAykHeG2fWxR6CCZypU0";
 
   try {
     const response = await fetch(url, {
@@ -71,22 +50,15 @@ document.querySelector("form").addEventListener("submit", async function (e) {
     });
 
     if (response.ok) {
-      try {
-        alert("¡Formulario enviado correctamente!");
-        document.querySelector("form").reset();
-        cerrarFormulario();
-      } 
-      catch (uiError) {
-        console.error("Error al actualizar la interfaz:", uiError);
-      }
-    } 
-    else {
+      alert("¡Formulario enviado correctamente!");
+      document.querySelector("form").reset();
+      cerrarFormulario();
+    } else {
       alert("Error al enviar el formulario.");
     }
-} 
-catch (err) {
-  console.error(err);
-  alert("Ocurrió un error al enviar los datos.");
-  cerrarFormulario();
-}
+  } catch (err) {
+    console.error(err);
+    alert("Ocurrió un error al enviar los datos.");
+    cerrarFormulario();
+  }
 });
