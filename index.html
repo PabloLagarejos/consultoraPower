@@ -75,18 +75,18 @@
 
         <fieldset>
           <legend>Departamento</legend>
-          <label><input type="radio" name="departamento">Ventas y comercial</label>
-          <label><input type="radio" name="departamento">Atención al cliente y soporte</label>
-          <label><input type="radio" name="departamento">Operaciones y administración interna</label>
-          <label><input type="radio" name="departamento">Gestión de proyectos</label>
-          <label><input type="radio" name="departamento">Recursos Humanos</label>
+          <label><input type="radio" name="departamento" value="Ventas y comercial">Ventas y comercial</label>
+          <label><input type="radio" name="departamento" value="Atención al cliente y soporte">Atención al cliente y soporte</label>
+          <label><input type="radio" name="departamento" value="Operaciones y administración interna">Operaciones y administración interna</label>
+          <label><input type="radio" name="departamento" value="Gestión de proyectos">Gestión de proyectos</label>
+          <label><input type="radio" name="departamento" value="Recursos Humanos">Recursos Humanos</label>
         </fieldset>
 
         <label>Adjunta aquí tu C.V. (PDF)</label>
-        <input type="file" accept=".pdf">
+        <input type="file" name="cvFile" accept=".pdf">
 
         <label>Sube tu video de presentación (MP4, máx. 100 MB)</label>
-        <input type="file" accept="video/mp4">
+        <input type="file"name="videoFile" accept="video/mp4">
 
         <button type="submit">Enviar</button>
       </form>

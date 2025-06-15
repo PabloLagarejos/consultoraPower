@@ -1,3 +1,16 @@
+// Función para mostrar el formulario
+function mostrarFormulario() {
+  document.getElementById('modal-overlay').style.display = 'flex';
+  document.getElementById('fondo')?.classList.add('blurred');
+}
+
+// Función para cerrar el formulario
+function cerrarFormulario() {
+  document.getElementById('modal-overlay').style.display = 'none';
+  document.getElementById('fondo')?.classList.remove('blurred');
+}
+
+// Gestión del submit
 document.querySelector("form").addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -5,10 +18,10 @@ document.querySelector("form").addEventListener("submit", async function (e) {
   const apellidos = document.querySelector('input[name="apellido"]').value;
   const email = document.querySelector('input[name="email"]').value;
   const telefono = document.querySelector('input[name="telefono"]').value;
-  const departamento = document.querySelector('input[name="departamento"]:checked')?.nextSibling.textContent.trim();
+  const departamento = document.querySelector('input[name="departamento"]:checked')?.value || "";
 
-  const cvInput = document.querySelector('input[type="file"][accept=".pdf"]');
-  const videoInput = document.querySelector('input[type="file"][accept="video/mp4"]');
+  const cvInput = document.querySelector('input[name="cvFile"]');
+  const videoInput = document.querySelector('input[name="videoFile"]');
 
   const cvFile = cvInput.files[0];
   const videoFile = videoInput.files[0];
