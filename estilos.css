@@ -160,7 +160,7 @@ form label {
   border-radius: 8px; /* opcional, por estética */
   max-width: 100%;    /* asegura que no se desborde */
   height: auto;
-  width: 800px;
+  width: 600px;
 }
 input[type="text"],
 input[type="email"],
