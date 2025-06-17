@@ -17,7 +17,7 @@ document.querySelector("form").addEventListener("submit", async function (e) {
   const nombre = document.querySelector('input[name="nombre"]').value;
   const apellidos = document.querySelector('input[name="apellido"]').value;
   const email = document.querySelector('input[name="email"]').value;
-  const telefono = document.querySelector('input[type="tel"]').value;
+  const telefono = document.querySelector('input[name="telefono"]').value;
   console.log("Teléfono capturado:", telefono);
   const departamento = document.querySelector('input[name="departamento"]:checked')?.value || "";
 
@@ -73,6 +73,11 @@ document.querySelector("form").addEventListener("submit", async function (e) {
   } catch (err) {
     console.error(err);
     alert("Ocurrió un error al enviar los datos.");
+    cerrarFormulario();
+  }
+});
+document.getElementById('modal-overlay').addEventListener('click', function (e) {
+  if (e.target === this) {
     cerrarFormulario();
   }
 });

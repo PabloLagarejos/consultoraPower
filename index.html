@@ -65,7 +65,7 @@
         <label>Teléfono</label>
         <div class="telefono-grupo">
           <span class="prefijo">+34</span>
-          <input type="tel"name="telefono" placeholder="Número de teléfono">
+          <input type="text" name="telefono" placeholder="Número de teléfono" oninput="this.value = this.value.replace(/[^0-9]/g, '')" maxlength="9">
         </div>
 
         <fieldset>
