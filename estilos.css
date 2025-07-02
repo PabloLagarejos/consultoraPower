@@ -4,13 +4,20 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 body {
   margin: 0;
-  background: #f4f4f4;
+  background: #fff;
   font-family: 'Arial', sans-serif;
   height: 100vh;
   overflow: hidden;
+  flex-direction: column;
+  min-height: 100vh;
+  display: flex;
 }
 h1 {
   font-size: 1.8rem;
@@ -125,6 +132,9 @@ main img{
   margin-top: 30px;
   width: 400px;
    
+}
+#main-content {
+  flex: 1 0 auto;
 }
 .cerrar-modal {
   position: absolute;
@@ -243,7 +253,10 @@ button[type="submit"]:active {
   font-size: 0.9em;
   padding: 20px 10px;
   border-top: 1px solid #ddd;
-  max-height: 40px;
+  max-height: 70px;
+  flex-shrink: 0;
+  margin-top: auto;
+  width: 100%;
 }
 
 .footer a {

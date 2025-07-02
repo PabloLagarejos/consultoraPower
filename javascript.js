@@ -81,3 +81,4 @@ document.getElementById('modal-overlay').addEventListener('click', function (e) 
     cerrarFormulario();
   }
 });
+alert("Valor capturado del teléfono:", telefono);
