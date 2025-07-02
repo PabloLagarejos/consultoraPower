@@ -13,11 +13,9 @@ body {
   margin: 0;
   background: #fff;
   font-family: 'Arial', sans-serif;
-  height: 100vh;
-  overflow: hidden;
-  flex-direction: column;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
 }
 h1 {
   font-size: 1.8rem;
@@ -133,6 +131,19 @@ main img{
   width: 400px;
    
 }
+.footer {
+  background-color: #f2f2f2;
+  color: #666;
+  text-align: center;
+  font-size: 0.9em;
+  padding: 20px 10px;
+  border-top: 1px solid #ddd;
+  max-height: 70px;
+  flex-shrink: 0;
+  margin-top: auto;
+  width: 100%;
+}
+
 #main-content {
   flex: 1 0 auto;
 }
